@@ -2,6 +2,10 @@ package ru.pa4ok.lab1;
 
 import ru.pa4ok.lab1.list.LinkedList;
 
+/**
+ * вариант 4
+ * двусвязный список + вставка другого списка в конец
+ */
 public class Application
 {
     public static void main(String[] args)

@@ -11,7 +11,7 @@ public class LinkedListItem<T>
 {
     protected T value;
     protected LinkedListItem<T> previous;
-    protected LinkedListItem<T> next;
+    public LinkedListItem<T> next;
 
     @Override
     public String toString() {
