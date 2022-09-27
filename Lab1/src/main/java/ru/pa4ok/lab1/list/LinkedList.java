@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 public class LinkedList<T>
 {
     protected int size;
-    public LinkedListItem<T> first;
+    protected LinkedListItem<T> first;
 
     private LinkedListItem<T> getItem(int index)
     {
