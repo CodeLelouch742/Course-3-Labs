@@ -24,6 +24,10 @@ public class Entity
             return false;
         }
 
+        if(this.closest != null) {
+            return true;
+        }
+
         Entity closest = null;
         double closestDistance = Double.MAX_VALUE;
         double closestCount = 0;
