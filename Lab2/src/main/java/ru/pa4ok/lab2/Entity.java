@@ -2,8 +2,6 @@ package ru.pa4ok.lab2;
 
 import lombok.Data;
 
-import java.util.Objects;
-
 @Data
 public class Entity
 {
