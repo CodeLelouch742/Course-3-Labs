@@ -3,22 +3,27 @@ package ru.pa4ok.lab2;
 import java.util.*;
 
 /**
- * Для удобства расчетов растояние считается в см
- * Тогда, если скорость 1см/сек, дистация будет равна времени прохождения
+ * Для удобства расчетов расстояние считается в см
+ * Тогда, если скорость 1см/сек, дистанция будет равна времени прохождения
  * n - количество улиток
  *
  * количество вычислений расстояния между улитками достигается меньше чем n^2
  * улитки, которые запутались или идут навстречу, пропускаются при дальнейших поисках ближайших
  *
- * когда улитка e1 нашли ближайшую улитку e2
- * если у e2 еще не найдена ближайшая улитка, и она сама не запуталась, вызывается ее поиск
- * после этого, если e1 и e2 нашли друг друга, они исключаются из дальнейших сравнений
+ * когда улитка e1 нашла ближайшую улитку e2
+ * если у e2 еще не найдена ближайшая улитка
+ * и она сама не запуталась, вызывается ее поиск
+ * после этого, если e1 и e2 нашли друг друга
+ * они исключаются из дальнейших сравнений
  */
 public class Application
 {
     public static final Random RAND = new Random();
     public static final int BORDER = 100_000;
-    public static final int ENTITY_COUNT = 50 + RAND.nextInt(25);
+    public static final int ENTITY_COUNT = 10000 + RAND.nextInt(25);
+    public static final int ENTITY_COUNT_SQ = ENTITY_COUNT * ENTITY_COUNT;
+
+    public static int entityComparingCount = 0;
 
     public static void main(String[] args)
     {
@@ -45,7 +50,8 @@ public class Application
         }
 
         if(minDistance != Double.MAX_VALUE) {
-            System.out.println("Минимальное время " + (int)Math.ceil(minDistance) + " сек.");
+            System.out.println("Минимальное время: " + (int)Math.ceil(minDistance) + " сек");
+            System.out.println("Количество сравнений: " + entityComparingCount + " / " + ENTITY_COUNT_SQ);
         } else {
             System.out.println("Все улитки запутались в своей бинарности <clown>");
         }

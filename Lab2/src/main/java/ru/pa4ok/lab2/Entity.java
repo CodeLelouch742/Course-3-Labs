@@ -35,6 +35,7 @@ public class Entity
         for(Entity e : entities) {
             if(e != this && !e.blocked && !e.doubleFound) {
                 double distance = this.getDistance(e);
+                Application.entityComparingCount++;
                 if(distance < closestDistance) {
                     closest = e;
                     closestDistance = distance;
