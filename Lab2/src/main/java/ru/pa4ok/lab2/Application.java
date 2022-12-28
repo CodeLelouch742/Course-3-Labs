@@ -20,7 +20,7 @@ public class Application
 {
     public static final Random RAND = new Random();
     public static final int BORDER = 100_000;
-    public static final int ENTITY_COUNT = 10000 + RAND.nextInt(25);
+    public static final int ENTITY_COUNT = 100 + RAND.nextInt(25);
     public static final int ENTITY_COUNT_SQ = ENTITY_COUNT * ENTITY_COUNT;
 
     public static int entityComparingCount = 0;
