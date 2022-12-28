@@ -2,8 +2,15 @@ package ru.pa4ok.lab3.impl;
 
 import ru.pa4ok.lab3.common.IntSorter;
 
+/**
+ * min: O(n log(n))
+ * max: O(n log(n))
+ * avg: O(n log(n))
+ */
 public class MergeSorter implements IntSorter
 {
+    public static final MergeSorter INSTANCE = new MergeSorter();
+
     @Override
     public void sort(int[] arr)
     {

@@ -2,8 +2,16 @@ package ru.pa4ok.lab3.impl;
 
 import ru.pa4ok.lab3.common.IntSorter;
 
+/**
+ * https://www.programiz.com/dsa/shell-sort
+ * min: O(n log^2(n))
+ * max: O(n^2)
+ * avg: O(n log(n))
+ */
 public class ShellSorter implements IntSorter
 {
+    public static final ShellSorter INSTANCE = new ShellSorter();
+
     @Override
     public void sort(int[] arr)
     {

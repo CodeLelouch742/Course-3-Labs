@@ -2,8 +2,15 @@ package ru.pa4ok.lab3.impl;
 
 import ru.pa4ok.lab3.common.IntSorter;
 
+/**
+ * min: O(n^2)
+ * max: O(n^2)
+ * avg: O(n^2)
+ */
 public class SelectSorter implements IntSorter
 {
+    public static final SelectSorter INSTANCE = new SelectSorter();
+
     @Override
     public void sort(int[] arr)
     {
