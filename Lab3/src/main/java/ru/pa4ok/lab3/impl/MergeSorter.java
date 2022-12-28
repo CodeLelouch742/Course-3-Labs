@@ -11,12 +11,18 @@ public class MergeSorter implements IntSorter
 {
     public static final MergeSorter INSTANCE = new MergeSorter();
 
+    /**
+     * основной метод сортировки
+     */
     @Override
     public void sort(int[] arr)
     {
         sort(arr, 0, arr.length-1);
     }
 
+    /**
+     * рекурсивная логика сортировки
+     */
     private void sort(int[] arr, int left, int right)
     {
         if (right <= left) {
@@ -29,6 +35,9 @@ public class MergeSorter implements IntSorter
         merge(arr, left, mid, right);
     }
 
+    /**
+     * слияние
+     */
     private void merge(int[] arr, int left, int mid, int right)
     {
         int lengthLeft = mid - left + 1;

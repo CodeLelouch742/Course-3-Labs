@@ -12,6 +12,9 @@ public class ShellSorter implements IntSorter
 {
     public static final ShellSorter INSTANCE = new ShellSorter();
 
+    /**
+     * основной метод сортировки
+     */
     @Override
     public void sort(int[] arr)
     {

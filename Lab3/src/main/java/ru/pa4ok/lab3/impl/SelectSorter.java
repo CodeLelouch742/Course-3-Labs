@@ -11,6 +11,9 @@ public class SelectSorter implements IntSorter
 {
     public static final SelectSorter INSTANCE = new SelectSorter();
 
+    /**
+     * основной метод сортировки
+     */
     @Override
     public void sort(int[] arr)
     {

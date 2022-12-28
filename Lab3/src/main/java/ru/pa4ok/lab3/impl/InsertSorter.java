@@ -11,6 +11,9 @@ public class InsertSorter implements IntSorter
 {
     public static final InsertSorter INSTANCE = new InsertSorter();
 
+    /**
+     * основной метод сортировки
+     */
     @Override
     public void sort(int[] arr)
     {

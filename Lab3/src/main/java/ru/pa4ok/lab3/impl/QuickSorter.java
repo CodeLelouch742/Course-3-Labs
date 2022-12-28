@@ -11,12 +11,19 @@ public class QuickSorter implements IntSorter
 {
     public static final QuickSorter INSTANCE = new QuickSorter();
 
+    /**
+     * основной метод сортировки
+     */
     @Override
     public void sort(int[] arr)
     {
         sort(arr, 0, arr.length-1);
     }
 
+
+    /**
+     * рекурсивная логика сортировки
+     */
     private void sort(int[] arr, int begin, int end)
     {
         if (begin < end)
@@ -27,12 +34,16 @@ public class QuickSorter implements IntSorter
         }
     }
 
+    /**
+     * сортировка вокруг "стержня"
+     */
     private int partition(int[] arr, int begin, int end)
     {
         int pivot = arr[end];
         int i = (begin-1);
 
-        for (int j = begin; j < end; j++) {
+        for (int j = begin; j < end; j++)
+        {
             if (arr[j] <= pivot) {
                 i++;
 

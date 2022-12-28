@@ -11,6 +11,9 @@ public class BubbleSorter implements IntSorter
 {
     public static final BubbleSorter INSTANCE = new BubbleSorter();
 
+    /**
+     * основной метод сортировки
+     */
     @Override
     public void sort(int[] arr)
     {
